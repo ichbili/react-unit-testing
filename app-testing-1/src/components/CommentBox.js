@@ -1,0 +1,41 @@
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { saveComment, fetchComments } from '../actions'
+
+class CommentBox extends Component {
+    state = { comment: '', comments: []};
+    handleChange = event => {
+        this.setState({ comment: event.target.value});
+    }
+    handleSubmit = event => {
+        event.preventDefault();
+        this.props.saveComment(this.state.comment);
+        this.setState({comment: ''});
+    }
+    render() {
+        return(
+            <div className="comment-box">
+            <form onSubmit={this.handleSubmit}>
+                <h4>Add a comment</h4>
+                <textarea 
+                    onChange={this.handleChange}
+                    value={this.state.comment}/>
+                <div>
+                <button type="submit">Submit comment</button>
+                </div>
+            </form>
+            <button
+             onClick={this.props.fetchComments}
+             className="fetch-comments"
+             >Fetch Comments</button>
+            </div>
+        );
+    }
+}
+
+const mapDispatchToProps = {
+    saveComment,
+    fetchComments
+};
+
+export default connect(null, mapDispatchToProps)(CommentBox);
