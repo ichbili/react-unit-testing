@@ -893,21 +893,3 @@ const comments = action.payload
 
 ## Test 7: Integration testing of fetch comments
 
-## Planning: 
-
-OK - Part 1: 12 séances 28mn + 1h AC = 1h30mn
-
-OK - Part 2: de 12 à 22 53mn + 2h AC voir la doc de JEST = 3h de travail
-
-OK - Part 3: de 23 à 37 63mn + 2h AC voir la doc de Enzyme = 3h de travail
-
-OK - Part 4: de 37 à 46 46mn + 1h45mn = 2h30mn
-
-* Part 5: de 47 à 51 72mn + 2h45mn = 1séance de 2.5h de travail
-
-* Part 6: de 52 à 63 72mn + 2h45mn = 1séance de 2.5h de travail
-
-
-
-* Total 14h de travail
-
